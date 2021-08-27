@@ -35,7 +35,6 @@ export class BroadcastQueryClient extends QueryClient {
     const queryCache = this.getQueryCache()
 
     this.getQueryCache().subscribe(queryEvent => {
-      //@ts-ignore
       if (transaction || !queryEvent?.query) {
         return
       }
